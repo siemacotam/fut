@@ -1,0 +1,14 @@
+.cardsWrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    flex-basis: 30%;
+}
+
+.card__name {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}

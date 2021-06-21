@@ -11,7 +11,7 @@ export const cards = [
         position:'ST',
         type:'icon',
         name: 'Ronaldo',
-        photo:'./img/ronaldo',
+        photo:'./img/players/ronaldo.png',
         pac:99,
         sho:99,
         pas:99,
@@ -19,7 +19,8 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     },
     {
         club: 'Real Madrit',
@@ -30,7 +31,7 @@ export const cards = [
         position:'LB',
         type:'icon',
         name: 'Roberto Carlos',
-        photo:'./img/ronaldo',
+        photo:'./img/players/carlos.png',
         pac:99,
         sho:99,
         pas:99,
@@ -38,7 +39,8 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     },
     {
         club: 'Real Madrit',
@@ -49,7 +51,7 @@ export const cards = [
         position:'ST',
         type:'icon',
         name: 'Raul',
-        photo:'./img/raul',
+        photo:'./img/players/raul.png',
         pac:99,
         sho:99,
         pas:99,
@@ -57,7 +59,8 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     },
     {
         club: 'Real Madrit',
@@ -68,7 +71,7 @@ export const cards = [
         position:'GK',
         type:'icon',
         name: 'Casillas',
-        photo:'./img/casillas',
+        photo:'./img/players/casillas.png',
         pac:99,
         sho:99,
         pas:99,
@@ -76,7 +79,8 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     },
     {
         club: 'Real Madrit',
@@ -87,7 +91,7 @@ export const cards = [
         position:'CM',
         type:'icon',
         name: 'Zidane',
-        photo:'./img/zidane',
+        photo:'./img/players/zidane.png',
         pac:99,
         sho:99,
         pas:99,
@@ -95,7 +99,8 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     },
     {
         club: 'Real Madrit',
@@ -106,7 +111,7 @@ export const cards = [
         position:'CM',
         type:'icon',
         name: 'Figo',
-        photo:'./img/figo',
+        photo:'./img/players/figo.png',
         pac:99,
         sho:99,
         pas:99,
@@ -114,13 +119,17 @@ export const cards = [
         def:99,
         phy:99,
         price: 100000,
-        relase: '1.07.2021'
+        relase: '1.07.2021',
+        amount: 1,
     }
 ]
+
+export const playerCards = []
 
 const LatestCards = () => {
     const allCards = cards.map( card => {return (
         <div className='card' key ={card.name}>
+            <img className='card__player' src={card.photo} alt="" />
             <p>{card.rate}</p>
             <p>{card.position}</p>
             <img src={card.nationalityLogo} alt="" /> <br />

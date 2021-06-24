@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {cards, playerCards} from './LatestCards'
 
+export let exp = 0
+
 class Pack extends Component {
     state = { 
         index: '',
@@ -16,12 +18,13 @@ class Pack extends Component {
     handleSaveButton = () => {
         const name = playerCards.map(item => item.name)
         const name2 = cards[this.state.index].name
+        exp += 5
 
         const option = name.filter( item => {if(item === name2){return 1}})
         console.log(option)
         if(option[0] === name2 ) {(
             // dodawanie ilosci kart
-            playerCards.map( card => {if(card.name === name2){return card.amount = card.amount + 1} console.log(card.amount) })
+            playerCards.map( card => {if(card.name === name2){return card.amount = card.amount + 1} })
             )} else {
             playerCards.push(cards[this.state.index])
         }
@@ -29,8 +32,6 @@ class Pack extends Component {
         this.setState({
             index: ''
         })
-
-        console.log(playerCards)
     }
 
     render() { 

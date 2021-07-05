@@ -4,7 +4,7 @@ import {playerCards} from './LatestCards'
 const MyCards = () => {
 
     const cards = playerCards.map(item => 
-            <div className='card' key ={item.name}>
+            <div className={ item.type + ' card'} key ={item.name}>
                 <img className='card__player' src={item.photo} alt="" />
                 <p>{item.rate}</p>
                 <p>{item.position}</p>

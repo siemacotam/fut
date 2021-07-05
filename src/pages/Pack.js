@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {cards, playerCards} from './LatestCards'
+import '../styles/Pack.css'
 
 export let exp = 0
 
@@ -37,16 +38,21 @@ class Pack extends Component {
     render() { 
         return ( 
             <div>
-                {this.state.index !== '' ? null : <button onClick = {this.handleButton}>click me</button>}
-                {this.state.index !== '' ? <div className='cardsWrap'><div className='card' key ={cards[this.state.index].name}>
+                {this.state.index !== '' ? null : <button className='pack__button' onClick = {this.handleButton}>click me</button>}
+                {this.state.index !== '' ? <div className='cardsWrap'><div className={ cards[this.state.index].type + ' card'} key ={cards[this.state.index].name}>
                     <img className='card__player' src={cards[this.state.index].photo} alt="" />
                     <p>{cards[this.state.index].rate}</p>
                     <p>{cards[this.state.index].position}</p>
                     <img src={cards[this.state.index].nationalityLogo} alt="" /> <br />
                     <img src={cards[this.state.index].clubLogo} alt="foto" />
                 <p className='card__name'>{cards[this.state.index].name}</p>
-                </div></div>: null}
-                {this.state.index !== '' ? <button onClick = {this.handleSaveButton}>zapisz</button> : null }
+                </div></div>:
+                
+                <div className='cardsWrap'><div className='card'>
+                </div></div>
+
+                 }
+                {this.state.index !== '' ? <button className='pack__button' onClick = {this.handleSaveButton}>zapisz</button> : null }
             </div>
          );
     }

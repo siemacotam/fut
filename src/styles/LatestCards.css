@@ -1,5 +1,6 @@
 .cardsWrap {
     display: flex;
+    margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -11,6 +12,12 @@
     padding: 5px;
     z-index: -2;
     border: 2px solid black;
+}
+
+.card--big {
+    height: 50vh;
+    flex-basis: 70%;
+    background-color: blue;
 }
 
 .card__name {

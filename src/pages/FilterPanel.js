@@ -27,7 +27,7 @@ class FilterPanel extends Component {
                 <button className="panelOption">r</button>
             </div>
             {this.state.activeButton === '' ? <MyCards /> : null}
-            {this.state.activeButton === 1 ? <Positions /> : null}
+            {this.state.activeButton === 1 ? <Positions positions={this.state.activeButton}/> : null}
             </>
          );
     }

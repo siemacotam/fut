@@ -13,24 +13,25 @@ class Positions extends Component {
                 position: p,
             })
         }})
+        
     }
 
     render() { 
 
-        const cards = playerCards.filter(item => {if(item.position == this.state.position){ 
-            console.log(item)
-    //     <div className={ item.type + ' card'} key ={item.name}>
-    //     <img className='card__player' src={item.photo} alt="" />
-    //     <p>{item.rate}</p>
-    //     <p>{item.position}</p>
-    //     <img src={item.nationalityLogo} alt="" /> <br />
-    //     <img src={item.clubLogo} alt="foto" />
-    //     <p className='card__name'>{item.name}</p>
-    //     <p>{item.amount}</p>
-    // </div>
-        }})
-    
-        
+        console.log(this.props.positions)
+
+        const cards = playerCards.filter(item => {if(item.position == this.state.position){ return item}})
+
+            const siema = cards.map(item => 
+                <div className={ item.type + ' card'} key ={item.name}>
+            <img className='card__player' src={item.photo} alt="" />
+            <p>{item.rate}</p>
+            <p>{item.position}</p>
+            <img src={item.nationalityLogo} alt="" /> <br />
+            <img src={item.clubLogo} alt="foto" />
+        <p className='card__name'>{item.name}</p>
+        </div>
+         )
 
 
         return ( 
@@ -38,10 +39,10 @@ class Positions extends Component {
             {this.state.position === '' ? <div className='positionsWrap'>
                 <button onClick={() => {this.handleButton('GK')}}>GK</button>
                 <button>LB</button>
-                <button>CB</button>
+                <button onClick={() => {this.handleButton('CB')}}>CB</button>
                 <button>RB</button>
                 <button>LM</button>
-                <button>CM</button>
+                <button onClick={() => {this.handleButton('CM')}}>CM</button>
                 <button>RM</button>
                 <button>LW</button>
                 <button>RW</button>
@@ -49,10 +50,11 @@ class Positions extends Component {
                 <button>FW</button>
                 <button>ST</button>
             </div> : null}
-            {this.state.position === 'GK' ? 
+            {this.state.position !== '' ? 
              <div className='cardsWrap'>
-                {cards}
-            </div> : null}
+                {siema}
+            </div> : null 
+            }
             </>
          );
     }

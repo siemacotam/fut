@@ -34,6 +34,21 @@ const lvlUp = [
         level: 4,
         expToLvl:35,
     },
+    {
+        exp: 135,
+        level: 5,
+        expToLvl:100,
+    },
+    {
+        exp: 235,
+        level: 6,
+        expToLvl:500,
+    },
+    {
+        exp: 735,
+        level: 7,
+        expToLvl:1000,
+    },
 ]
 
 class UserPanel extends Component {

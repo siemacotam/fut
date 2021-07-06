@@ -48,7 +48,7 @@ class Pack extends Component {
                 <p className='card__name'>{cards[this.state.index].name}</p>
                 </div></div>:
                 
-                <div className='cardsWrap'><div className='card'>
+                <div className='cardsWrap'><div className='card card--big'>
                 </div></div>
 
                  }

@@ -13,12 +13,15 @@ const MyCards = () => {
                 <p className='card__name'>{item.name}</p>
                 <p>{item.amount}</p>
             </div>)
-    console.log(cards)
+
+window.scrollTo(0,0)
 
     return ( 
+        <>
         <div className='cardsWrap'>
-           {cards}
-       </div>
+            {cards}
+        </div>
+       </>
      );
 }
  

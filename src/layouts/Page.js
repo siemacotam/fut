@@ -4,7 +4,7 @@ import '../styles/Page.css'
 import UserMainMenu from '../pages/UserMainMenu'
 import LatestCards from '../pages/LatestCards'
 import Pack from '../pages/Pack'
-import MyCards from '../pages/MyCards'
+import FilterPanel from '../pages/FilterPanel'
 
 const Page = () => {
     return ( 
@@ -13,7 +13,7 @@ const Page = () => {
                 <Route path='/' exact component={UserMainMenu}></Route>
                 <Route path='/latestcards' component={LatestCards}></Route>
                 <Route path='/pack' component={Pack}></Route>
-                <Route path='/mycards' component={MyCards}></Route>
+                <Route path='/mycards' component={FilterPanel}></Route>
             </Switch>
         </div>
      );

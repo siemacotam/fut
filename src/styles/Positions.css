@@ -1,0 +1,8 @@
+.positionsWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.positionsWrap button {
+    margin: 5px 0;
+}
